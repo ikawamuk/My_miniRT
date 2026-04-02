@@ -1,0 +1,15 @@
+*
+!.github/
+!.github/**
+!.gitignore
+!**/
+!*.c
+!*.h
+!Makefile
+!scene
+!docs/*.md
+!test/*
+!test_scene/**
+!*.rt
+!normalize.py
+!README.md

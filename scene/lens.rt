@@ -1,0 +1,16 @@
+C	0,0,-20	0,0,1	90
+A	0.0		0,100,255
+
+L	0,3,-20	1.0		255,255,255
+L	0,10,5	1.0		255,255,255
+sp	0,0,-17.4	5.0		255,255,255	dielectric	solid
+
+sp	2,0,5	4.0		0,0,0	lambertian	checker
+sp	-2,0,5	4.0		255,255,255	metal	solid
+
+cy	-7,4,-7	0,1,0	10	50	150,0,0	lambertian	checker
+cy	7,4,-7	0,1,0	10	50	255,255,255	metal bump
+
+pl	0,0,40	0,0,-1	120,120,120
+pl	0,-2,0	0,1,0	0,120,0	lambertian	solid
+pl	0,0,-21	0,0,1	0,0,120	lambertian	checker

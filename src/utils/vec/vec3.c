@@ -1,0 +1,60 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   vec3.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: khanadat <khanadat@student.42tokyo.jp>     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/11 19:11:51 by khanadat          #+#    #+#             */
+/*   Updated: 2026/03/15 17:56:20 by khanadat         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "vec_utils.h"
+#include "rt_utils.h"
+#include <math.h>
+#include <stddef.h>
+
+/*
+@param e0 X(R)
+@param e1 Y(G)
+@param e2 Z(B)
+*/
+t_vec3	construct_vec3(double e0, double e1, double e2)
+{
+	t_vec3	vec3;
+
+	vec3.e[0] = e0;
+	vec3.e[1] = e1;
+	vec3.e[2] = e2;
+	return (vec3);
+}
+
+t_vec3	map_vec3(t_vec3 vec3, double (*f)(double))
+{
+	return (construct_vec3(
+			f(vec3.e[0]),
+			f(vec3.e[1]),
+			f(vec3.e[2])));
+}
+
+t_vec3	fill_vec3(double d)
+{
+	return (construct_vec3(d, d, d));
+}
+
+/*
+@brief each params must be 0-255
+*/
+t_color	construct_color(double e0, double e1, double e2)
+{
+	return (scal_mul_vec3(construct_vec3(e0, e1, e2), COLOR_DIV));
+}
+
+/*
+@param raw_color RGB[0-255]
+*/
+t_color	normalize_color(t_color raw_color)
+{
+	return (scal_mul_vec3(raw_color, COLOR_DIV));
+}
