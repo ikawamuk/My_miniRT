@@ -8,15 +8,17 @@ miniRT is a project in the 42 curriculum that involves implementing a ray tracer
 
 ### Features
 - Ambient lighting, spot light sources, and camera settings
-	> [TODO] add images
+	![Path Tracing Model](image/geo.jpg)
+	![yoko.rt](image/geo_yoko.jpg)
 - geometries, including spheres, planes, and cylinders.
-	> [TODO] add images
+	![cornel.rt](image/cornel.jpg)
 - Various textures and materials
-	> [TODO] add images
+	![material.rt](image/material.jpg)
 
 ### Technical Features
 - Support for both Path Tracing and the Phong Reflection Model.
-	> [TODO] add images
+	![Path Tracing Model](image/geo.jpg)
+	![Phong Model](image/geo-a.jpg)
 - Optimization using AABB (Axis-Aligned Bounding Box) and BVH (Bounding Volume Hierarchy).
 
 ## Instructions
@@ -38,6 +40,11 @@ make
 ```
 
 ## Gallery
+![cessna](image/cessna.jpg)
+![teddy-a](image/teddy-a.jpg)
+![cow-a](image/cow-a.jpg)
+![red-metal-cow](image/red-metal-cow.jpg)
+![glass](image/glass.jpg)
 
 ## Resources
 
@@ -48,6 +55,7 @@ make
 - [Ray tracing nyumon](https://zenn.dev/mebiusbox/books/8d9c42883df9f6)
 - [memoRANDOM](https://rayspace.xyz/)
 - [yobinori](https://www.youtube.com/watch?v=aNoEzONgIYo)
+- [Bounding Volume Hierarchy(BVH)](https://qiita.com/omochi64/items/9336f57118ba918f82ec)
 
 ### AI Usage
 Clarifying concepts, Troubleshooting & Debugging, Answering technical queries:
